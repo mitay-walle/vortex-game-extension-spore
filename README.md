@@ -1,4 +1,4 @@
-# vortex-game-extension-spore
+# Spore Extension for NexusMods Vortex
 Vortex (NexusMods) extension, to add support for Spore
 # TODO
 - [ ] Basic Implementation [Documentation](https://wiki.nexusmods.com/index.php/Creating_a_game_extension_for_Vortex)
