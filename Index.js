@@ -16,7 +16,7 @@ const moddingTools = [
     //     id: 'SMAEInstaller',
     //     name: 'Spore ModAPI Easy Installer',
     //     logo: 'Icon_EasyInstaller.png',
-    //     shortName: 'SMAEIn',
+    //     shortName: 'SMAE In',
     //     executable: () => 'SporeModAPILauncherKit/Spore ModAPI Easy Installer.exe',
     //     requiredFiles: [
     //         'SporeModAPILauncherKit/Spore ModAPI Easy Installer.exe',
@@ -26,7 +26,7 @@ const moddingTools = [
     //     id: 'SMAEUninstaller',
     //     name: 'Spore ModAPI Easy Unistaller',
     //     logo: 'Icon_EasyUninstaller.png',
-    //     shortName: 'SMAEUn',
+    //     shortName: 'SMAE Un',
     //     executable: () => 'SporeModAPILauncherKit/Spore ModAPI Easy Uninstaller.exe',
     //     requiredFiles: [
     //         'SporeModAPILauncherKit/Spore ModAPI Easy Uninstaller.exe',
@@ -35,8 +35,10 @@ const moddingTools = [
     {
         id: 'SMALauncher',
         name: 'Spore ModAPI Launcher',
-        logo: 'assets/Icon_Launcher.png',
-        shortName: 'SMAL',
+        logo: 'assets/Icon Launcher.png',
+        shortName: 'SMA La',
+        defaultPrimary: true,
+        onStart: 'hide',
         executable: () => 'assets/SporeModAPILauncherKit/Spore ModAPI Launcher.exe',
         requiredFiles: [
             'assets/SporeModAPILauncherKit/Spore ModAPI Launcher.exe',
@@ -69,7 +71,7 @@ function main(context) {
         },
 
     });
-    context.registerInstaller('smaeinstaller', 25, testSupportedContent, installContent);
+    context.registerInstaller('package-file-mod-installer', 25, testSupportedContent, installContent);
     //context.setPrimaryTool('SMALauncher');
     return true
 }
