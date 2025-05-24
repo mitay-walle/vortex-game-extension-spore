@@ -52,12 +52,11 @@ function main(context) {
             mergeMods: true,
         queryPath: findGame,
         supportedTools: [],
-        queryModPath: () => 'BloodstainedRotN/Content/Paks/~mods',
+        queryModPath: () => 'DataEP1',
         logo: 'gameart.jpg',
-        executable: () => 'BloodstainedROTN.exe',
+        executable: () => 'SporebinEP1/SporeApp.exe',
         requiredFiles: [
-            'BloodstainedRotN.exe',
-            'BloodstainedROTN/Binaries/Win64/BloodstainedRotN-Win64-Shipping.exe'
+            'SporebinEP1/SporeApp.exe'
         ],
         setup: prepareForModding,
         environment: {
