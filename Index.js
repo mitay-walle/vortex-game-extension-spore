@@ -35,11 +35,11 @@ const moddingTools = [
     {
         id: 'SMALauncher',
         name: 'Spore ModAPI Launcher',
-        logo: 'Icon_Launcher.png',
+        logo: 'assets/Icon_Launcher.png',
         shortName: 'SMAL',
-        executable: () => 'SporeModAPILauncherKit/Spore ModAPI Launcher.exe',
+        executable: () => 'assets/SporeModAPILauncherKit/Spore ModAPI Launcher.exe',
         requiredFiles: [
-            'SporeModAPILauncherKit/Spore ModAPI Launcher.exe',
+            'assets/SporeModAPILauncherKit/Spore ModAPI Launcher.exe',
         ],
     }
 ];
@@ -70,6 +70,7 @@ function main(context) {
 
     });
     context.registerInstaller('smaeinstaller', 25, testSupportedContent, installContent);
+    //context.setPrimaryTool('SMALauncher');
     return true
 }
 
