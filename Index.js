@@ -48,12 +48,12 @@ function main(context) {
     //This is the main function Vortex will run when detecting the game extension.
     context.registerGame({
         id: GAME_ID,
-        name: 'Spore',
+        name: 'Spore Galactic Adventures',
             mergeMods: true,
         queryPath: findGame,
-        supportedTools: [],
+        supportedTools: moddingTools,
         queryModPath: () => 'DataEP1',
-        logo: 'gameart.jpg',
+        logo: 'gameart.png',
         executable: () => 'SporebinEP1/SporeApp.exe',
         requiredFiles: [
             'SporebinEP1/SporeApp.exe'
@@ -62,6 +62,7 @@ function main(context) {
         environment: {
             SteamAPPId: STEAMAPP_ID,
         },
+
         details: {
             steamAppId: STEAMAPP_ID,
             gogAppId: GOGAPP_ID,
@@ -77,7 +78,7 @@ function findGame() {
         const instPath = winapi.RegGetValue(
             'HKEY_LOCAL_MACHINE',
             'SOFTWARE\\WOW6432Node\\GOG.com\\Games\\' + GOGAPP_ID,
-            'PATH');
+            'path');
         if (!instPath) {
             throw new Error('empty registry key');
         }
