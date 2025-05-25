@@ -9,6 +9,7 @@ const GOGAPP_ID = '1948823323';
 //Import some assets from Vortex we'll need.
 const path = require('path');
 const { fs, log, util } = require('vortex-api');
+const winapi = require('winapi-bindings');
 const MOD_FILE_EXT = ".package";
 
 const moddingTools = [
@@ -35,14 +36,13 @@ const moddingTools = [
     {
         id: 'SMALauncher',
         name: 'Spore ModAPI Launcher',
-        logo: 'assets/Icon Launcher.png',
+        logo: () => path.join(__dirname, 'assets','SporeModAPILauncherKit','Icon Launcher.png'),
         shortName: 'SMA La',
         defaultPrimary: true,
         onStart: 'hide',
-        executable: () => 'assets/SporeModAPILauncherKit/Spore ModAPI Launcher.exe',
-        requiredFiles: [
-            'assets/SporeModAPILauncherKit/Spore ModAPI Launcher.exe',
-        ],
+        queryPath: () => path.join(__dirname, 'assets','SporeModAPILauncherKit'),
+        executable: () => 'Spore ModAPI Launcher.exe',
+        requiredFiles: [],
     }
 ];
 
